@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.DS_Store
+# Registro local de los agentes (no se versiona)
+.agent-log/
