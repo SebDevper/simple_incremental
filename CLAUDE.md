@@ -12,7 +12,7 @@ Juego incremental con Svelte 5 + TypeScript + Vite. Responde en español.
 - Se desarrolla en la rama `dev`. Los PR van de `dev` a `main`.
 - **Pide permiso al usuario antes de cada commit y cada PR.** Sin excepciones.
 - Cada commit o PR debe tener menos de 300 líneas cambiadas (sin contar `package-lock.json`). Mídelo con `./scripts/diff-size.sh`. Si no cabe, divide el cambio.
-- El flujo de revisión → testing → commit → PR lo inicia el usuario con `/revisar`.
+- El flujo de revisión → testing → commit → PR lo inicia el usuario con `/revisar`. Al hacer merge en `main`, GitHub Actions despliega en GitHub Pages.
 - El agente `codificador` solo se lanza cuando el usuario ejecuta `/codificar`. Nunca lo lances por iniciativa propia.
 - Los agentes se comunican mediante el registro `.agent-log/` (no se versiona). Cada flujo tiene su propio archivo.
 - Las decisiones del proyecto se registran en `docs/decisiones.md`. Consúltalo antes de cambiar el stack o la arquitectura.
