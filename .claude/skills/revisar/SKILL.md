@@ -23,10 +23,16 @@ Lanza el agente `tester` con la ruta del registro.
 - Si el estado es FALLA, muestra los comentarios al usuario y detente a la espera de instrucciones.
 - Si el estado es OK, pasa al paso 3.
 
-## 3. Commit (requiere permiso)
-Propón un mensaje de commit y pide permiso al usuario. Solo con un sí: haz `git add` de los archivos del cambio y el commit.
+Que el usuario inicie `/revisar` ya es su aprobación: los pasos 3 y 4 se hacen sin pedir confirmación.
 
-## 4. PR a main (requiere permiso)
-Propón título y descripción del PR y pide permiso. Solo con un sí: haz `git push -u origin dev` y `gh pr create --base main --head dev`.
+## 3. Commit
+Haz `git add` solo de los archivos del cambio (nunca archivos ignorados ni ajenos al cambio) y el commit, con un mensaje que lo resuma.
+
+## 4. PR a main
+1. Haz `git push -u origin dev`.
+2. Si ya hay un PR abierto de dev a main (`gh pr list --head dev --base main --state open`), no crees otro: el push ya lo actualizó.
+3. Si no lo hay, crea uno con `gh pr create --base main --head dev`, con título y descripción que resuman el cambio y la verificación.
+
+Al terminar, informa al usuario del commit y del enlace del PR.
 
 Anota en el registro el commit y el enlace del PR.
