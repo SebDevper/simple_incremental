@@ -43,7 +43,7 @@ scripts/diff-size.sh  mide las líneas cambiadas respecto a main
 2. El responsable inicia el flujo con `/revisar` en Claude Code:
    - **revisor**: revisa los cambios. Si hay comentarios bloqueantes, se corrigen y se vuelve a revisar. Las sugerencias no bloquean. Hay 5 intentos como máximo; si se agotan, el flujo se detiene y pide instrucciones.
    - **tester**: ejecuta `check`, `test` y `build`.
-   - **Commit** y **PR de `dev` a `main`**, cada uno con aprobación explícita.
+   - **Commit** y **PR de `dev` a `main`**, automáticos si la revisión y el testing pasan. Iniciar `/revisar` es la aprobación.
 3. Al hacer merge en `main`, GitHub Actions vuelve a comprobar y despliega en GitHub Pages.
 
 El agente **codificador** desarrolla tareas cuando se le pide con `/codificar <tarea>`, y después sigue el mismo flujo.

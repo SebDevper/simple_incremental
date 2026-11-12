@@ -10,7 +10,7 @@ Juego incremental con Svelte 5 + TypeScript + Vite. Responde en español.
 
 ## Reglas de trabajo
 - Se desarrolla en la rama `dev`. Los PR van de `dev` a `main`.
-- **Pide permiso al usuario antes de cada commit y cada PR.** Sin excepciones.
+- **Pide permiso al usuario antes de cada commit y cada PR**, salvo dentro de `/revisar` (o `/codificar`, que lo continúa). Que el usuario inicie el flujo ya es su aprobación: si la revisión y el testing pasan, el commit y el PR se hacen sin preguntar.
 - Cada commit o PR debe tener menos de 300 líneas cambiadas (sin contar `package-lock.json`). Mídelo con `./scripts/diff-size.sh`. Si no cabe, divide el cambio.
 - El flujo de revisión → testing → commit → PR lo inicia el usuario con `/revisar`. Al hacer merge en `main`, GitHub Actions despliega en GitHub Pages.
 - El agente `codificador` solo se lanza cuando el usuario ejecuta `/codificar`. Nunca lo lances por iniciativa propia.

@@ -3,3 +3,6 @@ dist/
 .DS_Store
 # Registro local de los agentes (no se versiona)
 .agent-log/
+# Configuración personal de Claude Code e historial de sesiones (no se versionan)
+.claude/settings.local.json
+sesiones-claude.md
